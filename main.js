@@ -14,7 +14,8 @@ async function renderWorkerData() {
 `;
 }
 async function postToWorker() {
-  const data = { squadName: "warp", hometown: "bla" };
+  const input = document.querySelector("#user-input").value;
+  const data = { squadName: input };
 
   const response = await fetch("api", {
     method: "POST",
