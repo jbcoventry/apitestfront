@@ -9,13 +9,13 @@ async function renderWorkerData() {
 
   document.querySelector("#result").innerHTML = `
   <div>
-  <p> ${data.squadName} </p>
+  <p> ${data.title} </p>
   </div>
 `;
 }
 async function postToWorker() {
   const input = document.querySelector("#user-input").value;
-  const data = { squadName: input };
+  const data = { wineryNumber: +input };
 
   const response = await fetch("api", {
     method: "POST",
@@ -26,8 +26,6 @@ async function postToWorker() {
   });
 
   const result = await response.json();
-
-  console.log(result.message);
 }
 
 function init() {
