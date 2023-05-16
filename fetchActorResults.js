@@ -7,4 +7,3 @@ async function fetchActorResults() {
   return data;
 }
 export default fetchActorResults;
-
